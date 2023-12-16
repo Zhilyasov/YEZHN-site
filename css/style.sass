@@ -1,0 +1,776 @@
+// НИШТЯКИ SASS
+
+$bgColor: #000 // Объявление переменной и её значение
+
+// В миксины можно закладывать много значений и переиспользовать их 
+@mixin name
+  font-size: 100px
+  background: $bgColor
+// Чтобы использовать миксин в нужном месте пишем @include name
+
+// Миксины могут принимать параметры
+@mixin name2 ($color, $fontW)
+  color: $color
+  font-weight: $fontW
+  background: #000
+// Чтобы использовать миксин с параметрами, нужно передать эти параметы. @include name2(#000, bold)
+
+// =============== GLOBAL =============================================================
+// =============== GLOBAL =============================================================
+
+html, body
+  font-family: Montserrat, sans-serif
+  color: #fff
+  font-style: normal
+  line-height: 30px
+  background-color: #000
+
+header
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  height: 100%
+
+.main__numbers
+
+.main__process
+  color: #000
+  height: 542px
+
+.main__about
+  padding: 64px 0 0
+
+.main__delivery
+
+.main__services
+
+.main__map
+
+.heading__title
+  color: #000
+  font-family: Bebas Neue Cyrillic, sans-serif
+  font-size: 35px
+  font-weight: 600
+
+.heading__subtitle
+  color: #000
+  font-family: Montserrat
+  font-size: 29px
+  font-weight: 500
+
+// =============== HEADER =============================================================
+// =============== HEADER =============================================================
+.header__nav
+  background: url("../images/bg/hnav-bg.jpg") 0 0 / 100% no-repeat
+  height: 91px
+
+.nav__content
+  height: 100%
+  font-size: 22px
+
+.nav__content-inner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 100%
+
+.nav__logo
+
+.nav__logo-link
+  img
+    height: 52px
+    width: 171px
+
+.nav__block
+  display: flex
+
+.nav__block-item
+  white-space: nowrap
+  margin-right: 42px
+
+.nav__block-item
+  &:last-child
+    margin-right: 0
+
+.nav__block-item-link
+  transition: all .3s
+
+.nav__block-item-link:hover
+  color: #a59898
+  transition: all .3s
+
+.nav__contacts
+  display: flex
+  flex-wrap: nowrap
+  a
+    margin: 0
+
+.nav__contacts-whtspp
+  display: inline-block
+  padding-right: 6px
+
+.nav__contacts-tg
+  display: inline-block
+  padding-right: 10px
+
+.nav__contacts-number
+  display: inline-block
+  width: 165px
+  height: 38px
+
+.header__content
+  color: #000
+
+.header__content-bg
+  background: url("../images/bg/bg-img1.jpg") 50% 50% / cover no-repeat
+
+.header__content-inner
+  padding: 90px 0 100px
+
+.header__title
+  margin-bottom: 40px
+
+.header__list
+  margin-bottom: 38px
+
+.header__list-item
+  display: flex
+  align-items: center
+  font-size: 23px
+  margin-bottom: 11px
+
+.header__list-item
+  &::before
+    content: ""
+    background: url("../images/icons/logo-black-mini.svg") 0 0 /100% no-repeat
+    width: 31px
+    height: 31px
+    margin-right: 6px
+
+.header__list-item
+  &:last-child
+    margin-bottom: 0
+
+.bold__text
+  font-weight: 700
+
+.header__btn
+
+.header__btn-content
+  display: inline-block
+  font-size: 20px
+  color: #fff
+  background: #000
+  white-space: nowrap
+  padding: 7px 15px
+  transition: .3s
+
+.header__btn-content
+  &:hover
+    transform: scale(1.03)
+    // Увеличение размера кнопки при наведении (таким способом онп не будет ломаться)
+
+// =============== NUMBERS =============================================================
+// =============== NUMBERS =============================================================
+
+.numbers__list
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 48px 0 40px
+
+.numbers__list-item
+  text-align: center
+  img
+    display: block
+    margin: 0 auto
+    margin-bottom: 12px
+  span
+    font-size: 25px
+
+// =============== PROCESS =============================================================
+// =============== PROCESS =============================================================
+
+.process__bg
+  background: url("../images/bg/bg-img2.jpg") 50% 50% / cover no-repeat
+  height: 100%
+  padding: 78px 40px
+
+.process__bg-border
+  position: relative // Для позиционирования псевдоэлемента
+  border: 2.5px solid #104510
+  margin-bottom: 42px
+
+.process__bg-border
+  &::before
+    content: "Карго из Китая - самый удобный способ доставки, в которой офрмление грузоперевозки выполняется по упрощенной схеме:" // Текстовая надпись
+    position: absolute // Позиционирование псевдоэлемента относительно родительского элемента
+    top: -25px // Расположение надписи относительно верхней границы
+    left: 50% // Расположение надписи по центру
+    transform: translateX(-50%) // Центрирование надписи
+    background: linear-gradient(to right, #fffbd9, #fff3b5) // Цвет фона надписи
+    text-align: center
+    font-size: 25px
+    font-weight: 500
+    padding: 0 5px // Отступы для фона надписи
+    width: 900px
+
+.process__heading
+  text-align: center
+  font-size: 25px
+  font-weight: 500
+
+.process__about
+  margin: 40px 0 30px
+  text-align: center
+
+.process__steps
+  padding: 45px 0 20px
+
+.process__description
+  display: flex
+  justify-content: space-between
+
+.process__desc-name
+  color: #416A22
+  text-align: center
+  font-family: Bebas Neue Cyrillic
+  font-size: 32px
+  text-transform: uppercase
+  font-weight: 600
+  margin-right: 50px
+
+.process__desc-name
+  &:last-child
+    margin-right: 0
+
+.process__desc-info
+  color: #000
+  text-align: center
+  font-family: Montserrat
+  font-size: 20px
+  font-weight: 500
+  text-transform: none
+  margin-top: 12px
+
+// =============== ABOUT =============================================================
+// =============== ABOUT =============================================================
+
+.about__inner
+  position: relative
+
+.about__bg
+  img
+    position: absolute
+    top: 0
+    right: 114px
+
+.about__heading
+  display: flex
+  justify-content: space-between
+  margin-bottom: 48px
+
+.about__heading-inner
+
+.about__heading-content
+  max-width: 700px
+
+.heading__title-white
+  color: #FFF
+  font-family: Bebas Neue Cyrillic
+  font-size: 50px
+  font-weight: 400
+  margin-bottom: 12px
+
+.heading__subtitle-white
+  color: #FFF
+  font-family: Montserrat
+  font-size: 25px
+  font-weight: 500
+
+.heading__logo-big
+
+.about__icons-img-box
+  position: absolute
+  display: grid
+  width: 100%
+  justify-content: center
+  align-content: center
+
+.about__showing
+  width: 1100px
+  height: 450px
+  position: absolute
+
+.about__icons
+  display: grid
+  width: 100%
+  grid-template-rows: auto auto
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  li
+    margin: 160px 0 60px
+
+.about__hidden
+  display: none
+  width: 239px
+  height: 204px
+  margin: 0 auto
+  margin-bottom: 70px
+  &:last-child
+    margin-bottom: 0
+
+.about__icon
+  &:nth-child(1)
+    p
+      margin-left: -140px
+
+.about__icon
+  &:nth-child(2)
+    p
+      margin-left: -20px
+      width: 300px
+
+.about__icon
+  &:nth-child(3)
+    p
+      margin-left: 20px
+      width: 250px
+
+.about__icon
+  &:nth-child(4)
+    p
+      margin: 0 0px 0 -20px
+
+.about__icon
+  &:nth-child(5)
+    p
+      margin-left: -80px
+      width: 300px
+
+.about__icon
+  &:nth-child(6)
+    p
+      margin-left: 0px
+      width: 200px
+
+.about__icon
+  &:nth-child(7)
+    p
+      margin-left: -10px
+      width: 300px
+
+.about__icon
+  &:nth-child(8)
+    p
+      margin: 0 0px 0 0px
+
+.about__icon-desc
+  color: #FFF
+  text-align: center
+  font-family: Bebas Neue Cyrillic
+  font-size: 26px
+
+// =============== DELIVERY =============================================================
+// =============== DELIVERY =============================================================
+
+.delivery__bg
+  background-image: url("../images/bg/bg-img4.jpg")
+  background-size: cover
+  background-position: center
+
+.delivery__inner
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  height: 530px
+  padding: 60px 0 45px
+
+.delivery__header
+  text-align: center
+  font-family: Bebas Neue Cyrillic
+  font-size: 50px
+
+.delivery__box
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  text-align: center
+
+.delivery__box-item
+
+.delivery__way
+  font-family: Montserrat
+  font-size: 25px
+  font-weight: 700
+
+.delivery__time
+  font-family: Montserrat
+  font-size: 25px
+
+// =============== SERVICES =============================================================
+// =============== SERVICES =============================================================
+
+.services__bg
+  background: url("../images/bg/bg-img5.jpg") 0 0 / 100% no-repeat
+
+.services__header
+  padding-top: 60px
+  font-family: Bebas Neue Cyrillic
+  font-size: 50px
+
+.services__fbox
+
+.services__list
+  display: grid
+  grid-template-rows: repeat(4, 35vw)
+  grid-template-columns: 100%
+  align-items: center
+  justify-items: end
+
+.cell
+  justify-self: start
+
+.services__list-item
+
+.services__item-title
+  font-family: Montserrat
+  font-size: 2rem
+  font-weight: 700
+  padding-bottom: 32px
+
+.services__item-desc
+  font-family: Montserrat
+  font-size: 1.5rem
+  font-weight: 400
+  max-width: 600px
+
+// =============== FAQ =============================================================
+// =============== FAQ =============================================================
+
+.main__faq
+  color: #000
+
+.faq__bg
+  background-image: url("../images/bg/bg-img6.jpg")
+  background-size: cover
+  background-position: center
+  height: 820px
+  min-width: 1280px
+
+.faq__header
+  padding: 80px 0 35px
+
+.faq__content
+
+.faq__list
+  display: flex
+  flex-direction: column
+
+.faq__list-item
+  display: flex
+  margin-bottom: 31px
+
+.faq__list-item
+  &::before
+    content: ""
+    background: url("../images/icons/question-icon.svg") 0 0 / 100% no-repeat
+    width: 43px
+    height: 43px
+    margin-right: 21px
+
+.faq__item-box
+
+.faq__item-header
+  font-size: 25px
+  font-weight: 700
+
+.faq__item-content
+  font-size: 20px
+  max-width: 500px
+
+// =============== FEEDBACK =============================================================
+// =============== FEEDBACK =============================================================
+
+.main__feedback
+  padding: 58px 0 62px
+
+.feedback__header
+  font-family: Bebas Neue Cyrillic
+  font-size: 50px
+  text-align: center
+  margin-bottom: 36px
+
+.feedback__list
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.feedback__item
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  text-align: center
+  max-width: 340px
+  border: 4.5px solid #416A22
+  border-radius: 10%
+  padding: 21px 18px
+  margin-right: 20px
+
+.feedback__item
+  &:last-child
+    margin-right: 0
+
+.feedback__item-header
+  font-size: 25px
+  font-weight: 700
+  margin-bottom: 6px
+
+.feedback__item-text
+  font-size: 18px
+  margin-bottom: 13px
+
+.feedback__item-time
+  font-size: 20px
+  font-weight: 700
+
+// =============== MAP =============================================================
+// =============== MAP =============================================================
+
+.map__bg
+  background-image: url("../images/bg/bg-img7.jpg")
+  background-size: cover
+  background-position: center
+  height: 734px
+  min-width: 1280px
+
+.map__inner
+  padding: 75px 0 62px
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.map__inner-box
+  display: flex
+  align-items: stretch
+  justify-content: center
+  margin-bottom: 60px
+
+.map__header
+  display: inline-block
+  font-family: Bebas Neue Cyrillic
+  font-size: 50px
+  padding: 50px 60px 0 0
+
+.map__header-list
+  display: inline-flex
+  flex-direction: column
+  align-items: flex-start
+  font-size: 25px
+  position: relative
+
+.map__header-list
+  &::before
+    content: ""
+    background: url("../images/icons/contacts-icon.svg")
+    width: 18px
+    height: 109px
+    position: absolute
+    top: 7px
+    left: -26px
+
+.map__header-item
+  transition: all .5s
+
+.map__header-item
+  &:hover
+    color: #000
+    transition: all .5s
+
+.map__header-adress
+
+.map__header-whatsapp
+
+.map__header-telephone
+
+.map__header-mail
+
+.map__box
+  align-items: center
+
+.map
+
+// =============== FOOTER =============================================================
+// =============== FOOTER =============================================================
+
+.footer
+
+.footer__box
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 25px 0 20px
+
+.footer__box-item
+
+.footer__logo
+
+.footer__contacts
+  img
+    &:first-child
+      margin-right: 10px
+
+.footer__rights
+
+.footer__rights-text
+
+// ======================== MEDIA =========================== 
+// ======================== MEDIA =========================== 
+
+// ======================== 2500 ======================= 
+@media (max-width: 2500px)
+  .delivery__bg
+    height: 831px
+  .delivery__inner
+    height: 830px
+    padding: 90px 0 45px
+  .delivery__header
+    font-size: 70px
+  .delivery__way
+    font-size: 55px
+    padding-bottom: 15px
+  .delivery__time
+    font-size: 35px
+
+  /* ------------------------ */
+  .services__header
+    margin: 100px 0 0 -340px
+    font-size: 70px
+  .services__item-title
+    font-size: 5rem
+    line-height: 70px
+  .services__item-desc
+    font-size: 2.1rem
+    max-width: 900px
+  .services__list-item
+    margin-right: -200px
+    max-width: 900px
+  .cell
+    margin-left: -200px
+
+  /* ------------------------ */
+
+  /* ------------------------ */
+
+// ======================== 1900 ======================= 
+@media (max-width: 1900px)
+  .services__header
+    margin: 100px 0 0 -140px
+  /* ------------------------ */
+
+// ======================== 1500 ======================= 
+@media (max-width: 1500px)
+  .services__header
+    margin: 0px 0 -50px -40px
+
+  /* ------------------------ */
+  .delivery__bg
+    height: 600px
+  .delivery__inner
+    height: 600px
+    padding: 70px 0 35px
+
+  /* ------------------------ */
+  .services__list-item
+    margin-right: 100px
+    max-width: 600px
+  .services__item-title
+    font-size: 3rem
+    line-height: 50px
+  .services__item-desc
+    font-size: 1.7rem
+    max-width: none
+  .cell
+    margin-left: 0
+
+// ======================== 1300 ======================= 
+@media (max-width: 1300px)
+  .header__content-inner
+    margin-left: 10px
+
+  /* ------------------------ */
+  .numbers__list-item
+    img
+      height: 60px
+  .numbers__list-item
+    span
+      font-size: 17px
+
+  /* ------------------------ */
+  .process__bg-border
+    &::before
+      font-size: 17px
+      width: 600px
+  .process__steps
+    img
+      width: 600px
+  .process__description
+    justify-content: center
+  .process__desc-name
+    font-size: 20px
+    margin-right: 20px
+    max-width: 300px
+  .process__desc-info
+    font-size: 14px
+    margin-top: 0px
+  .about__icon-desc
+    font-size: 17px
+
+  /* ------------------------ */
+  .about__heading-inner
+    margin-left: 10px
+  .heading__title-white
+    font-size: 30px
+    margin-bottom: 5px
+  .heading__subtitle-white
+    font-size: 16px
+  .about__showing
+    width: 1000px
+    height: 340px
+  .about__icons
+    li
+      margin: 115px 0 55px
+  .about__icon
+    &:nth-child(1)
+      p
+        margin-left: -110px
+  .about__icon
+    &:nth-child(2)
+      p
+        margin-left: -20px
+        max-width: 200px
+  .about__icon
+    &:nth-child(3)
+      p
+        margin-left: -70px
+  .about__icon
+    &:nth-child(4)
+      p
+        margin-left: -80px
+        max-width: 200px
+
+  /* ------------------------ */
+  .services__header
+    margin: 50px 0 -50px 0px
+
+// ======================== 500 ======================= 
+@media (max-width: 500px)
+  .about__showing
+    display: none
+  .about__hidden
+    display: block
+  .about__icons-img-box
+    position: absolute
+
+  /* ------------------------ */
